@@ -6,30 +6,131 @@
     <script>
 
 //Задание №1
-    var a = 1, b = 1, c, d;
-    c = ++a; alert(c);           // 2
-    d = b++; alert(d);           // 1
-    c = (2+ ++a); alert(c);      // 5
-    d = (2+ b++); alert(d);      // 4
-    alert(a);                    // 3
-    alert(b);                    // 3
+//     var a = 1, b = 1, c, d;
+//     c = ++a; alert(c);           // 2 // 1. ++ преинкремент (стоит перед a), размещен до операнда, поэтому возвращается увеличенное значение на 1;
+//     d = b++; alert(d);           // 1 // 2. ++ постинкремент (стоит полсе b), размещен после операнда, поэтому возвращается оригинальное значение;
+//     c = (2+ ++a); alert(c);      // 5 // 3. сначала выполняется операция ++a, т.к у нее выше приоритет получаем увеличенное значене 2+1=3, замем операия сложения 2 + 3 = 5;
+//     d = (2+ b++); alert(d);      // 4 // 4. постинкремент b++ = 2 так и остается 2, к 2 + 2 = 4;
+//     alert(a);                    // 3 // 5. вывелось 3, т.к. в 3-ем примере мы выполняли операцию инкремента с "a", далее изменений с операндом "a" не выполнялось;
+//     alert(b);                    // 3 // 6. вывелось 3, т.к. в 4-ом примере b = 1
+//
+//Задание №2
+//     var a = 2;
+//     var x = 1 + (a *= 2); // (a * = 2) тоже самое что a = a * 2, т.к. a = 2, то 2*2=4. x = 1 + 4; x = 5.
 
-//Задание №2 и 3
-      var admin;
-      var name = "Василий";
-      admin = name;
-      console.log(admin);
+//Задание №3
+    // var a = +prompt("введите Первое целое число");
+    // var b = +prompt("введите Второе целое число");
+    // sum = 0;
+    // if (a >= 0 && b >= 0){       // 1. числа положительные
+    //   sum = a - b;
+    // } else if (a < 0 && b < 0) { // 2. числа отрицательные
+    //     sum = a * b;
+    // } else {                     // 3. иначе сложить числа
+    //     sum = a + b;
+    // }
+    // alert(sum);
 
 //Задание №4
-  /*Чему будет равно JS-выражение 1000 + "108"?
-  Выражение будут равно 1000108, т.к. JS преобразовал число 1000 в строку и склеил их через + конкатенировал */
-      var t = 1000 + "108";
-      console.log(t);
+    var x = +(Math.round(Math.random(x)*15)); // Выводяться числа от 0 до 15 включительно
+    switch (x){
+      case 0:
+        console.log(0);
+      case 1:
+        console.log(1);
+      case 2:
+        console.log(2);
+      case 3:
+        console.log(3);
+      case 4:
+        console.log(4);
+      case 5:
+        console.log(5);
+      case 6:
+        console.log(6);
+      case 7:
+        console.log(7);
+      case 8:
+        console.log(8);
+      case 9:
+        console.log(9);
+      case 10:
+        console.log(10);
+      case 11:
+        console.log(11);
+      case 12:
+        console.log(12);
+      case 13:
+        console.log(13);
+      case 14:
+        console.log(14);
+      case 15:
+        console.log(15);
+        // break;
+    }
+
 
 //Задание №5
-  /* Самостоятельно разобраться с атрибутами тега script (async и defer)
-  async страница загружвается асинхронно
-  defer страница полностью загружается, после чего происходит выполнение скрипта */
+    function sum (a,b){ //Сложение
+      sum = a + b; //summary
+      return sum;
+    }
+
+    function sub (a,b){ //Вычитание
+      sub = a - b; //subtract
+      return sub;
+    }
+
+    function com (a,b) { //Умножение
+      com = a * b; //compose
+      return com;
+    }
+
+    function div (a,b){ //Деление
+      div = a / b; //division
+      return div;
+    }
+
+    // var a = 10, b = 2;
+    // alert("Сумма чисел a и b равна " + sum(a,b));
+    // alert("Разность чисел a и b равна " + sub(a,b));
+    // alert("Умножение чисел a и b равно " + com(a,b));
+    // alert("Деление числа a на b равно " + div(a,b));
+
+//Задание №6
+    function mathOperation (arg1,arg2,operation){
+      switch (operation) {
+        case sum:
+          return  sum(arg1,arg2);
+          break;
+        case sub:
+          return sub(arg1,arg2);
+          break;
+        case com:
+          return com(arg1,arg2);
+          break;
+        case div:
+          return div(arg1,arg2);
+          break;
+        default:
+          alert('Используйте операции: \n sum - для суммирования, \n sub - для вычитания \n com - для умножения \n div - для деления ');
+          break;
+      }
+    }
+
+//Задание №7
+  console.log(null === 0);  //false
+  console.log(null == 0);   //false
+  console.log(+(null) === 0); //true
+  console.log(+(null) == 0);  //true
+  // Если null приобразовать к числу то он РАВЕН 0, иначе это разные типы данных, по умолчанию null это ОБЪЕКТ, а 0 - NUMBER
+
+//Задание №8
+  function exponent (){
+
+  }
+
+
     </script>
   </main>
 
