@@ -6,7 +6,7 @@
     <script>
 
 //Задание №1 Использую цикл while вывести простые числа от 0 до 100. Нужно использовать вложенные циклы
-console.log("Задание №1")
+document.write("<h1>Задание №1" + "<br></h1>")
   var i = 2;
   while (i<=100){
     var n = 2;
@@ -17,17 +17,17 @@ console.log("Задание №1")
       n++;
     }
     if ( n == i) {
-      console.log (i);
+      document.write (i + "<br>");
     }
     i++;
  }
 
 //Задание №2 Есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
 //В задании 3 а) реализован массив prices
-
+console.log("Задание №2 = задание №3 А")
 //Задание №3 Товары корзины храняться в массиве. Задачи:
 //а) Организовать такой массив.
-console.log("Задание №3а:")
+console.log("Задание №3 А:")
 var sum = 0;
 var prices = [100, 200, 250];
 for (i=0; i<prices.length; i++) {
@@ -36,7 +36,7 @@ for (i=0; i<prices.length; i++) {
 console.log(sum);
 
 //б) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
-console.log ("Задание №3б:")
+console.log ("Задание №3 Б:")
 var goods = prices;
 function countBacketPrice (arr) {
   var sum = 0;
@@ -45,7 +45,7 @@ function countBacketPrice (arr) {
   }
   return sum;
 }
-document.write("Итоговая сумма товаров в корзине: " + "<b>" + countBacketPrice(goods) + "</b>");
+console.log("Итоговая сумма товаров в корзине: " + countBacketPrice(goods));
 
 //Задание №4
     console.log("Задание №4:")
