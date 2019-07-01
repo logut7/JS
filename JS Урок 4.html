@@ -9,16 +9,23 @@
 // var num;
 
 function numberToObj() {
-  var num = +prompt("введите число от 0 до 999")
+  var num = prompt("введите число от 0 до 999")
   var arr=[];
   var max = 999;
     if (num>max){
       console.log("Вы ввели число больше чем" + max);
+      arr = {};
     } else {
       num.toString();
-      // num = num.split();
+      num = num.split("");
     }
-  return ;
+  return arr;
+  for (i=0; i<num.length; i++) {
+    if (num.length==3)
+    alert("в введенном ")
+  }
+
+
   // for (i=0; i<num.length; i++) {
   //   arr.push(num[i]);
   // }
