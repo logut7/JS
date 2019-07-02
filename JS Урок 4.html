@@ -5,14 +5,14 @@
   <main>
     <script>
 
-//Задание №1  Написать функцию, преобразующую число в объект
-var obj = {};
+// Задание №1  Написать функцию, преобразующую число в объект
 var number = +prompt("Введите число от 0 до 999")
 foo(number);
 function foo () {
-  if (number>999) {
-    console.log ("Число которое вы ввели больше 999")
-    obj = {};
+  var obj = {};
+  if (number<0 || number>999) {
+    console.log ("Ошибка, введите число от 0 до 999")
+    return console.log(obj);
   } else {
       num1 = Math.floor(number/100);
       if (num1 !==0) {
@@ -27,6 +27,11 @@ function foo () {
       return console.log(obj);
   }
 }
+
+
+
+
+
 
     </script>
   </main>
