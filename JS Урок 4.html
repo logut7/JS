@@ -11,7 +11,7 @@ foo(number);
 function foo () {
   var obj = {};
   if (number<0 || number>999) {
-    console.log ("Ошибка, введите число от 0 до 999")
+    console.log ("Ошибка, число " + number + " не входит в диапазон от 0 до 999")
     return console.log(obj);
   } else {
       num1 = Math.floor(number/100);
@@ -22,16 +22,10 @@ function foo () {
       if (num2 !==0) {
         obj.des = num2;
       }
-      num3 = Math.floor(number%10);
-      obj.ed = num3;
+      obj.ed = number%10;
       return console.log(obj);
   }
 }
-
-
-
-
-
 
     </script>
   </main>
