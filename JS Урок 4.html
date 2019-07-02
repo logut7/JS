@@ -6,73 +6,27 @@
     <script>
 
 //Задание №1  Написать функцию, преобразующую число в объект
-// var num;
-
-// function numberToObj() {
-//   var num = prompt("введите число от 0 до 999")
-//   var arr=[];
-//   var max = 999;
-//     if (num>max){
-//       console.log("Вы ввели число больше чем" + max);
-//       arr = {};
-//     } else {
-//       num.toString();
-//       num = num.split("");
-//     }
-//   for (i=0; i<num.length; i++) {
-//
-//     alert("в введенном Значении нужно добавить объект")
-//     return arr;
-//   }
-
-
-// }
-
-var number = Math.round(Math.random())
-
-var arr = prompt("Введите число от 0 до 999")
-if(arr>999) {
-  alert ("Вы ввели число больше 999")
-} else {
-    arr = arr.split("");
-    var obj = {
-      единицы: 0,
-      десятки: 0,
-      сотни: 0
-  };
-  for (i=0; i<arr.length; i++) {
-    alert (i);
-    if(arr.length == 3){
-      if(i==2){
-        obj.единицы = arr[i];
+var obj = {};
+var number = +prompt("Введите число от 0 до 999")
+foo(number);
+function foo () {
+  if (number>999) {
+    console.log ("Число которое вы ввели больше 999")
+    obj = {};
+  } else {
+      num1 = Math.floor(number/100);
+      if (num1 !==0) {
+        obj.sot = num1;
       }
-      else if (i==1){
-        obj.десятки = arr[i];
+      num2 = Math.floor((number%100)/10);
+      if (num2 !==0) {
+        obj.des = num2;
       }
-      if (i==0){
-        obj.сотни = arr[i];
-      }
-    } else if (arr.length ==2) {
-        if(i==1){
-          obj.единицы = arr[i];
-        }
-        else if (i==0){
-          obj.десятки = arr[i];
-        }
-    } else {
-        obj.единицы = arr[i];
-      }
+      num3 = Math.floor(number%10);
+      obj.ed = num3;
+      return console.log(obj);
   }
-  for (var i in obj)
-  console.log (i + ":" + obj[i]);
 }
-  // var arr = [];
-  // for (i=0; i<num.length; i++) {
-  //   arr.push(num[i]);
-
-// numberToObj();
-
-
 
     </script>
   </main>
