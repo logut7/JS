@@ -9,7 +9,7 @@ function startGame() {
 			+ "2. " + questions[i].a2 + "\n"
 			+ "3. " + questions[i].a3 + "\n"
 			+ "4. " + questions[i].a4 +"\n"
-			+ "-1 - Выход из игры"); 
+			+ "-1 - Выход из игры");
 			if (event == -1) {
 				break;
 			}
@@ -22,7 +22,7 @@ function startGame() {
 			if (i<4) {
 				money+=100;
 			}
-			else if (i>=4){
+			else if (i>=5){
 				money+=1000;
 			}
 		} else {
@@ -42,5 +42,4 @@ function isAnswer(event) {
         return false;
     } else (event == -1)
 	return true;
-    
 }
