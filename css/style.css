@@ -2,19 +2,23 @@ table {
   width: 640px;
   height: 640px;
   border: 1px solid black;
+  border-spacing: 0;
 }
 
 td {
-  width: 80px;
-  height: 80px;
-
+  width: 64px;
+  height: 64px;
 }
 
-
-.black {
-  background: #000;
+.gray {
+  background: #ccc;
   }
 
 .white {
   background: #fff;
+}
+
+
+.green {
+  background: green;
 }
