@@ -22,14 +22,12 @@ for (var i = 0; i < table.rows.length; i++) {
   rowEnd.cells[i].style.backgroundColor = '#ccc';
 }
 
-for (var i = 0; i < table.rows.length; i++) {
-  var row = table.rows[0];
-  var rowEnd = table.rows[9];
+// for (var i = 0; i < table.rows.length; i++) {
+//   var row = table.rows[0];
+//   var rowEnd = table.rows[9];
 //   row.cells[i].style.backgroundColor = '#ccc';
 //   rowEnd.cells[i].style.backgroundColor = '#ccc';
 // }
-
-
 
 
 // var td = document.getElementsByClassName("white");
