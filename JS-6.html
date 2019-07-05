@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
-  </head>
-  <main>
+    <meta charset="utf-8">
+    <title>Image Galery</title>
+    <link rel="stylesheet" href="case1/css/style.css">
     <script>
+      function init(){ //Создаем функцию с именем init без параметров
+        var images = document.getElementsByTagName('img'); //Находим элементы по тегу "img"
+        for(var i = 0; i< images.length; i++) { //Созали цикл for для обхода картинок
+        images[i].onclick = changeBigPicture;//При событии клика мышки на картинку с номером [i] присваивается функция changeBigPicture
+        }
+      }
 
-//Задание №1
-      var celsius = +prompt("Введите Temp в C");
-      var farenheit = (9/5)*celsius+32;
-      alert("Температура по Фаренгейту = " + farenheit);
-
-
-
-
+      function changeBigPicture(eventObj){//Сама функция changeBigPicture с параметром eventObj
+        var appDiv = document.getElementById("big_picture"); //создали переменную appDiv и присвоили ей элемент по ID "big_picture", который находится в html это div
+        appDiv.innerHTML=""; //очищаем переменную appDiv.innerHTML со свойством innerHTML
+        var eventElement = eventObj.target;//создали переменную eventElement и присвоили ей eventObj.target ???
+        console.log (eventElement);
+        var imageNameParts = eventElement.id.split("_");//создали переменную imageNameParts и присвоили ей значение по событию eventElement.id убрать в имени пути знак "_" - нижнего подчеркивания
+        console.log("Переменная imageNameParts" + imageNameParts);
+        console.log(imageNameParts);
+        var src = "case1/img/galery/big/" + imageNameParts[1]+".jpg"; //создали переменную src и присвоили ей строку "case1/img/galery/big/" и склеили путь с переменной image и массивом с индексом [1]
+        console.log("Переменная src получила значение: \n" + src);
+        var imageDomElement = document.createElement("img");//создали переменную imageDomElement и присвоили ей создатьЭлемент "img";
+        console.log("Переменная imageDomElement получила следующий путь файла-картинки:");
+        console.log(imageDomElement);
+        imageDomElement.src = src; //свойству переменной imageDomElement со свойством src мы присвоили переменную src
+        imageDomElement.onerror = function () {alert("Файл по адресу " + "'"+ src + "'"+ " не найден!")};
+        appDiv.appendChild(imageDomElement);
+      }
+      window.onload = init;
     </script>
-  </main>
+  </head>
+  <body>
+    <div id="gallery">
+      <img id="image_1" src="case1/img/galery/small/1.jpg" alt="Картинка1" title="Картинка1">
+      <img id="image_2" src="case1/img/galery/small/2.jpg" alt="Картинка2" title="Картинка2">
+      <img id="image_3" src="case1/img/galery/small/3.jpg" alt="Картинка3" title="Картинка3">
+    </div>
+    <div id="big_picture"></div>
+  </body>
 
 </html>
