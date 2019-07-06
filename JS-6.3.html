@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Galery</title>
+    <link rel="stylesheet" href="case1/css/style.css">
+    <script>
+      function init(){ //Создаем функцию с именем init без параметров
+        var but1 = document.getElementById("button1");
+        var but2 = document.getElementById("button2");
+        but1.onclick = pressButton;
+        but2.onclick = pressButton;
+      }
+
+      var imageBig = 0;
+      function pressButton (eventObj) {
+        console.log(eventObj);
+        if (eventObj.target.id=="button2") {//Работает только при нажатии кнопки Forward
+          imageBig++; // imageBig += imageBig; imageBig+1;
+        } else {
+          imageBig--;
+        }
+        var imageId="image_" + (imageBig+1);
+        var image = document.getElementById(imageId);
+        var imageX = document.getElementById("slider");
+        imageX.src = image.src;
+      }
+
+      window.onload = init;
+    </script>
+  </head>
+  <body>
+    <div id="gallery">
+      <img id="image_1" src="case3/img/galery/big/1.jpg" alt="Картинка1" title="Картинка1">
+      <img id="image_2" src="case3/img/galery/big/2.jpg" alt="Картинка2" title="Картинка2">
+      <img id="image_3" src="case3/img/galery/big/3.jpg" alt="Картинка3" title="Картинка3">
+    </div>
+    <div id="big_picture"></div>
+    <button type="button" id="button1" name="back">Back</button>
+    <button type="button" id="button2" name="forward">Forward</button>
+    <!-- <div id="sliderFull"> -->
+      <img id="slider" src="case3/img/galery/big/1.jpg" alt="Картинка1" title="Картинка1">
+    <!-- </div> -->
+    <p>Сперва нажать кноку <b>Forward</b></p>
+
+  </body>
+
+</html>
