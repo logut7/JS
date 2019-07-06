@@ -10,6 +10,10 @@
         for(var i = 0; i< images.length; i++) { //Созали цикл for для обхода картинок
         images[i].onclick = changeBigPicture;//При событии клика мышки на картинку с номером [i] присваивается функция changeBigPicture
         }
+        var but1 = document.getElementById("button1");
+        var but2 = document.getElementById("button2");
+        but1.onclick = pressButton;
+        but2.onclick = pressButton;
       }
 
       function changeBigPicture(eventObj){//Сама функция changeBigPicture с параметром eventObj
@@ -29,6 +33,23 @@
         imageDomElement.onerror = function () {alert("Файл по адресу " + "'"+ src + "'"+ " не найден!")};
         appDiv.appendChild(imageDomElement);
       }
+
+      var imageBig = 0;
+      function pressButton (eventObj) {
+        console.log(eventObj);
+        if (eventObj.target.id=="button1") {
+          imageBig++; // imageBig += imageBig; imageBig+1;
+        } else {
+          imageBig--;
+        }
+        var imageId="image_" + (imageBig+1);
+        var image = document.getElementById(imageId);
+        var imageX = document.getElementById("slider");
+        imageX.src = image.src;
+
+      }
+
+
       window.onload = init;
     </script>
   </head>
@@ -39,6 +60,13 @@
       <img id="image_3" src="case1/img/galery/small/3.jpg" alt="Картинка3" title="Картинка3">
     </div>
     <div id="big_picture"></div>
+    <button type="button" id="button1" name="back">back</button>
+    <button type="button" id="button2" name="forward">forward</button>
+    <!-- <div id="slider"> -->
+      <img id="slider" src="case1/img/galery/big/1.jpg" alt="Картинка1" title="Картинка1">
+
+    <!-- </div> -->
+
   </body>
 
 </html>
