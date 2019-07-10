@@ -17,19 +17,22 @@
       imgs[1].src="case3/img/2.jpg";
       imgs[2].src="case3/img/3.jpg";
 
-      function frw(){
+      function frw(){ //вправо можно пролистывать бесконечно
         if (i<imax){
           i++;
           document.images["abc"].src=imgs[i].src;
-          }
+        } else {
+            i=0;
+            document.images["abc"].src=imgs[i].src;
+        }
       }
 
-      function bck(){
+      function bck(){ //влево пока можно пролистывать ограниченное кол-во раз
         if (i>0){ // i>1
           i--;// i=imax-1;
           document.images["abc"].src=imgs[i].src;
         } else {
-          i=imax--;
+          i=imax;
           document.images["abc"].src=imgs[i].src;
         }
       }
