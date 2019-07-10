@@ -4,21 +4,26 @@
   width: 500px;
   height: 450px;
   border: 1px solid green;
+  position: relative;
 }
 
 #button1, #button2 {
-  width: 100px;
+  width: 70px;
   height: 50px;
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
-  margin-top: 35px;
+  width: 500px;
+  justify-content: space-between;
+  position: absolute;
+  /* left: 30%; */
+  top: 40%;
+  /* border: 1px solid brown; */
 }
 
 img {
-  display: block;
+  /* display: block; */
   overflow: hidden;
 
 }
