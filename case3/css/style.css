@@ -1,0 +1,24 @@
+.slidercl {
+  margin: 0 auto;
+  display: flex;
+  width: 500px;
+  height: 450px;
+  border: 1px solid green;
+}
+
+#button1, #button2 {
+  width: 100px;
+  height: 50px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+img {
+  display: block;
+  overflow: hidden;
+
+}
