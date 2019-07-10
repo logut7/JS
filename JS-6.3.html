@@ -25,7 +25,7 @@
       }
 
       function bck(){
-        if (i>=0){ // i>1
+        if (i>0){ // i>1
           i--;// i=imax-1;
           document.images["abc"].src=imgs[i].src;
         } else {
@@ -72,8 +72,8 @@
     <div id="slider" class="slidercl">
       <img id="image" src="case3/img/1.jpg" name="abc">
       <div class="buttons">
-        <img src="case3/img/Arrow.png" class="button2" onClick="bck()">
-        <img src="case3/img/Arrow.png" class="button1" onClick="frw()">
+        <img src="case3/img/Arrow.png" class="button2" onClick="bck()" alt="" title="Назад">
+        <img src="case3/img/Arrow.png" class="button1" onClick="frw()" alt="" title="Вперед">
         <!-- <button type="button" id="button1" value="Next" onClick="frw()">Next</button> -->
       </div>
     </div>
