@@ -22,13 +22,11 @@
   width: 500px;
   justify-content: space-between;
   position: absolute;
-  /* left: 30%; */
   top: 40%;
   /* border: 1px solid brown; */
 }
 
 img {
-  /* display: block; */
   overflow: hidden;
 
 }
