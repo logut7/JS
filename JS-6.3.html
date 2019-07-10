@@ -5,9 +5,9 @@
     <title>Image Galery</title>
     <link rel="stylesheet" href="case3/css/style.css">
     <script defer>
-      var i = 1;
-      var imax=3;
-//      var image = document.getElementById("image");
+      var i = 0;
+      var imax=2;
+//    var image = document.getElementById("image");
       var imgs= new Array;
       imgs[0]=new Image();
       imgs[1]=new Image();
@@ -20,24 +20,24 @@
       function frw(){
         if (i<imax){
           i++;
-          document.images["r"].src=imgs[i-1].src;
+          document.images["abc"].src=imgs[i].src;
+          }
+      }
+
+      function bck(){
+        if (i>=0){ // i>1
+          i--;// i=imax-1;
+          document.images["abc"].src=imgs[i].src;
         } else {
-          i--;
-          document.images["r"].src=imgs[i-1].src;
+          i=imax--;
+          document.images["abc"].src=imgs[i].src;
         }
       }
 
-      // function bck(){
-      //   if (i>1){
-      //     i--;
-      //     document.images["r"].src=imgs[i-1].src;
-      //   }
+      // function imgsrc(){
+      //   i++;
+      //   image.src=imgs[i];
       // }
-
-      function imgsrc(){
-        i++;
-        image.src=imgs[i];
-      }
 
       // img.onclick = function(){
       //   img.src = "next_image.jpg";
@@ -70,14 +70,13 @@
   </head>
   <body>
     <div id="slider" class="slidercl">
-      <img id="image" src="case3/img/1.jpg" name="r">
+      <img id="image" src="case3/img/1.jpg" name="abc">
       <div class="buttons">
-        <button type="button" id="button2" value="Previous" onClick="frw()">Previous</button>
-        <button type="button" id="button1" value="Next" onClick="frw()">Next</button>
+        <img src="case3/img/Arrow.png" class="button2" onClick="bck()">
+        <img src="case3/img/Arrow.png" class="button1" onClick="frw()">
+        <!-- <button type="button" id="button1" value="Next" onClick="frw()">Next</button> -->
       </div>
     </div>
-
-
   </body>
 
 </html>

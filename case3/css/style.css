@@ -7,9 +7,13 @@
   position: relative;
 }
 
-#button1, #button2 {
+.button1, .button2 {
   width: 70px;
-  height: 50px;
+  height: 70px;
+}
+
+.button2 {
+  transform: scale(-1, 1);
 }
 
 .buttons {
