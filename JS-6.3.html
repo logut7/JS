@@ -16,7 +16,7 @@
       imgs[1].src="case3/img/2.jpg";
       imgs[2].src="case3/img/3.jpg";
 
-      function frw(){ //вправо можно пролистывать бесконечно
+      function frw(){
         if (i<imax){
           i++;
           document.images["abc"].src=imgs[i].src;
@@ -26,9 +26,9 @@
         }
       }
 
-      function bck(){ //влево можно пролистывать бесконечно!
-        if (i>0){ // i>1
-          i--;// i=imax-1;
+      function bck(){
+        if (i>0){
+          i--;
           document.images["abc"].src=imgs[i].src;
         } else {
           i=imax;
