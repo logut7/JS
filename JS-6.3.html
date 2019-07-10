@@ -7,7 +7,6 @@
     <script defer>
       var i = 0;
       var imax=2;
-//    var image = document.getElementById("image");
       var imgs= new Array;
       imgs[0]=new Image();
       imgs[1]=new Image();
@@ -27,7 +26,7 @@
         }
       }
 
-      function bck(){ //влево пока можно пролистывать бесконечно!
+      function bck(){ //влево можно пролистывать бесконечно!
         if (i>0){ // i>1
           i--;// i=imax-1;
           document.images["abc"].src=imgs[i].src;
@@ -37,19 +36,6 @@
         }
       }
 
-      // function imgsrc(){
-      //   i++;
-      //   image.src=imgs[i];
-      // }
-
-      // function init(){ //Создаем функцию с именем init без параметров
-      //   var but1 = document.getElementById("button1");
-      //   var but2 = document.getElementById("button2");
-      //   but1.onclick = pressButton;
-      //   but2.onclick = pressButton;
-      // }
-      //
-      // window.onload = init;
     </script>
   </head>
   <body>
