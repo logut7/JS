@@ -1,3 +1,19 @@
-#gallery {
-  display: none;
+.gallery {
+  display: flex;
+  width: 750px;
+  justify-content: space-between;
+  margin: 0 auto;
+  /* border: 1px solid green; */
+}
+
+#big_picture {
+  margin: 0 auto;
+  display: flex;
+  width: 750px;
+  margin-top: 50px;
+  /* border: 1px solid black; */
+}
+
+img {
+  overflow: hidden;
 }

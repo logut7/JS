@@ -1,8 +1,8 @@
 .slidercl {
   margin: 0 auto;
   display: flex;
-  width: 500px;
-  height: 450px;
+  width: 750px;
+  height: 500px;
   border: 1px solid green;
   position: relative;
 }
@@ -19,7 +19,7 @@
 
 .buttons {
   display: flex;
-  width: 500px;
+  width: 750px;
   justify-content: space-between;
   position: absolute;
   top: 40%;
