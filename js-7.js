@@ -67,9 +67,9 @@ function startGame() {
     respawn();//создали змейку
 
     snake_timer = setInterval(move, SNAKE_SPEED);//каждые 200мс запускаем функцию move
-    food_timer = setTimeout(createFood, 5000);
+    food_timer = setTimeout(createFood, 3000);
 
-    setInterval(createBlock, 5000);
+    setInterval(createBlock, 4000);
 }
 
 /**
@@ -127,8 +127,8 @@ function move() {
         }
           new_unit=document.getElementsByClassName('cell-' + (coord_y - 1) + '-' + (coord_x))[0];
     }
-    else if (direction == 'y-') {
-        if (coord_y == FIELD_SIZE_Y-1){
+    else if (direction == 'y-') { //Если змейка приблизилась к нижней границе поля
+        if (coord_y == FIELD_SIZE_Y-1 //то переопределяю на верхнюю границу
           coord_y = -1;
         }
         new_unit = document.getElementsByClassName('cell-' + (coord_y + 1) + '-' + (coord_x))[0];
@@ -220,20 +220,6 @@ function createFood() {
     }
 }
 
-// function haveBlock(unit) {
-//     var check = false;
-//
-//     var unit_classes = unit.getAttribute('class').split(' ');
-//
-//     // Если еда
-//     if (unit_classes.includes('block-unit')) {
-//         check = true;
-//         finishTheGame();
-//     }
-//     return check;
-// }
-
-
 function createBlock() {
     var blockCreated = false;
 
@@ -253,6 +239,7 @@ function createBlock() {
           }
 
         block_cell.setAttribute('class', classes + 'block-unit');
+
         blockCreated = true;
       }
     }
@@ -299,7 +286,7 @@ function finishTheGame() {
 }
 
 function scoreResult() {
-    console.log("Текущий счет: " + score);
+    // console.log("Текущий счет: " + score);
   var result = document.getElementById('snake-score');// Добавление счетчика игры
     result.innerText = "Результат: " + score;
   }
