@@ -6,7 +6,7 @@ var snake = []; // Сама змейка
 var direction = 'y+'; // Направление движения змейки
 var gameIsRunning = false; // Запущена ли игра
 var snake_timer; // Таймер змейки
-// var food_timer; // Таймер для еды
+var food_timer; // Таймер для еды
 var score = 0; // Результат
 
 function init() {
@@ -67,8 +67,9 @@ function startGame() {
     respawn();//создали змейку
 
     snake_timer = setInterval(move, SNAKE_SPEED);//каждые 200мс запускаем функцию move
-    setTimeout(createFood, 5000);
-    setTimeout(createBlock, 5000);
+    food_timer = setTimeout(createFood, 5000);
+
+    setInterval(createBlock, 5000);
 }
 
 /**
