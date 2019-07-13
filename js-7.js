@@ -288,7 +288,7 @@ function finishTheGame() {
 }
 
 
-function scoreResult() {//Функция добавления результата игры на страничку
+function scoreResult() {//Функция добавления результата игры на страничку.
     // console.log("Текущий счет: " + score);
   var result = document.getElementById('snake-score');// Добавление счетчика игры
     result.innerText = "Результат: " + score;
