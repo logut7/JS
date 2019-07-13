@@ -284,10 +284,11 @@ function changeDirection(e) {
 function finishTheGame() {
     gameIsRunning = false;
     clearInterval(snake_timer);
-    alert('Вы отыграли! Ваш результат: ' + score.toString());
+    alert('Хорошо поиграли! Ваш результат: ' + score.toString());
 }
 
-function scoreResult() {
+
+function scoreResult() {//Функция добавления результата игры на страничку
     // console.log("Текущий счет: " + score);
   var result = document.getElementById('snake-score');// Добавление счетчика игры
     result.innerText = "Результат: " + score;
