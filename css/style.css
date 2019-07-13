@@ -11,6 +11,22 @@
     float: left;
     margin-right: 10px;
 }
+
+#snake-score {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  width: 180px;
+  box-sizing: border-box;
+  padding: 15px 40px;
+  color: white;
+  background-color: green;
+  text-align: right;
+  /* cursor: pointer; */
+  /* float: left; */
+  /* margin-right: 10px; */
+}
+
 .game-table{
     border-collapse: collapse;
     background-color: #3e3e3e;
@@ -26,6 +42,11 @@ td.game-table-cell{
 .food-unit{
     background-color: red;
 }
+
+.block-unit {
+  background-color: yellow;
+}
+
 .buttons{
     display: inline-block;
 }
