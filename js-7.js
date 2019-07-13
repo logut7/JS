@@ -127,8 +127,8 @@ function move() {
         }
           new_unit=document.getElementsByClassName('cell-' + (coord_y - 1) + '-' + (coord_x))[0];
     }
-    else if (direction == 'y-') { //Если змейка приблизилась к нижней границе поля
-        if (coord_y == FIELD_SIZE_Y-1 //то переопределяю на верхнюю границу
+    else if (direction == 'y-') { // Если змейка приблизилась к нижней границы
+        if (coord_y == FIELD_SIZE_Y-1){// то переопределяю координаты на появление сверху
           coord_y = -1;
         }
         new_unit = document.getElementsByClassName('cell-' + (coord_y + 1) + '-' + (coord_x))[0];
@@ -153,6 +153,7 @@ function move() {
 
             // удаляем хвост
             removed.setAttribute('class', classes[0] + ' ' + classes[1]);
+
         }
     }
     else {
@@ -241,6 +242,7 @@ function createBlock() {
         block_cell.setAttribute('class', classes + 'block-unit');
 
         blockCreated = true;
+
       }
     }
   }
