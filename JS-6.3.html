@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <title>Задание 3</title>
+    <link rel="stylesheet" href="case3/css/style.css">
+    <script defer>
+      var i = 0;
+      var imax=2;
+      var imgs= new Array;
+      imgs[0]=new Image();
+      imgs[1]=new Image();
+      imgs[2]=new Image();
+
+      imgs[0].src="case3/img/1.jpg";
+      imgs[1].src="case3/img/2.jpg";
+      imgs[2].src="case3/img/3.jpg";
+
+      function frw(){
+        if (i<imax){
+          i++;
+          document.images["abc"].src=imgs[i].src;
+        } else {
+            i=0;
+            document.images["abc"].src=imgs[i].src;
+        }
+      }
+
+      function bck(){
+        if (i>0){
+          i--;
+          document.images["abc"].src=imgs[i].src;
+        } else {
+          i=imax;
+          document.images["abc"].src=imgs[i].src;
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="slider" class="slidercl">
+      <img id="image" src="case3/img/1.jpg" name="abc">
+      <div class="buttons">
+        <img src="case3/img/Arrow.png" class="button2" onClick="bck()" alt="" title="Назад">
+        <img src="case3/img/Arrow.png" class="button1" onClick="frw()" alt="" title="Вперед">
+      </div>
+    </div>
+  </body>
+
+</html>

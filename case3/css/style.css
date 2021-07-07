@@ -1,0 +1,32 @@
+.slidercl {
+  margin: 0 auto;
+  display: flex;
+  width: 750px;
+  height: 500px;
+  border: 1px solid green;
+  position: relative;
+}
+
+.button1, .button2 {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.button2 {
+  transform: scale(-1, 1);
+}
+
+.buttons {
+  display: flex;
+  width: 750px;
+  justify-content: space-between;
+  position: absolute;
+  top: 40%;
+  /* border: 1px solid brown; */
+}
+
+img {
+  overflow: hidden;
+
+}
