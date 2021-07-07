@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+  </head>
+  <main>
+    <script>
+
+// Задание №1  Написать функцию, преобразующую число в объект
+var number = +prompt("Введите число от 0 до 999")
+f(number);
+function f () {
+  var obj = {};
+  if (number<0 || number>999) {
+    console.log ("Ошибка, число " + number + " не входит в диапазон от 0 до 999")
+    return console.log(obj);
+  } else {
+      num1 = Math.floor(number/100);
+      if (num1 !==0) {
+        obj.sot = num1;
+      }
+      num2 = Math.floor((number%100)/10);
+      if (num2 !==0) {
+        obj.des = num2;
+      }
+      obj.ed = number%10;
+      return console.log(obj);
+  }
+}
+
+
+    </script>
+  </main>
+
+</html>
